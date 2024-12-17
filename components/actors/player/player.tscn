@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0ra4farco7gn"]
+
+[ext_resource type="Texture2D" uid="uid://d3wjla5ikis1w" path="res://assets/theCell.png" id="1_wgkl3"]
+[ext_resource type="Script" path="res://components/actors/player/player.gd" id="1_wxlv5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wquty"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wgkl3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sluol"]
+radius = 12.7322
+height = 82.0153
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_wxlv5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wquty")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 0.782312
+shape = SubResource("CapsuleShape2D_sluol")
