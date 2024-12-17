@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="WeaponBase" load_steps=3 format=3 uid="uid://drq8is3thpx66"]
+
+[ext_resource type="Script" path="res://components/weapons/weapon_base.gd" id="1_l6yty"]
+[ext_resource type="Texture2D" uid="uid://bkhq0n3a2q8jr" path="res://assets/weapons/bow3.png" id="2_y4ct8"]
+
+[resource]
+script = ExtResource("1_l6yty")
+weapon_texture = ExtResource("2_y4ct8")
+weapon_stats = {
+"damage": 24,
+"type": "range"
+}
+weapon_color = Color(0, 0, 0, 1)

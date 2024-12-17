@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="WeaponBase" load_steps=3 format=3 uid="uid://dilxu8gdeo3yb"]
+
+[ext_resource type="Script" path="res://components/weapons/weapon_base.gd" id="1_fgyyg"]
+[ext_resource type="Texture2D" uid="uid://bkd77y1e3qqvg" path="res://assets/weapons/axe3.png" id="2_4rijh"]
+
+[resource]
+script = ExtResource("1_fgyyg")
+weapon_texture = ExtResource("2_4rijh")
+weapon_stats = {
+"damage": 30,
+"type": "melee"
+}
+weapon_color = Color(0, 0, 0, 1)

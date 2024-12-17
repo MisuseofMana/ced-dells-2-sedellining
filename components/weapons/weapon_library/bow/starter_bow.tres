@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="WeaponBase" load_steps=2 format=3 uid="uid://6tgv5ho0beny"]
+
+[ext_resource type="Script" path="res://components/weapons/weapon_base.gd" id="1_iblo2"]
+
+[resource]
+script = ExtResource("1_iblo2")
+weapon_stats = {
+"damage": 10,
+"type": "melee"
+}
+weapon_color = Color(0, 0, 0, 1)
