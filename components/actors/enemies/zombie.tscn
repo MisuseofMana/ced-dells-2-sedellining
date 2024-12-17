@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://2xms0llemqpc"]
+
+[ext_resource type="Texture2D" uid="uid://ries6wny28lv" path="res://assets/enemies/zombie.png" id="1_ex6ux"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b0a67"]
+atlas = ExtResource("1_ex6ux")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j74a3"]
+atlas = ExtResource("1_ex6ux")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yfdyn"]
+atlas = ExtResource("1_ex6ux")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3r1t"]
+atlas = ExtResource("1_ex6ux")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ih8b1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b0a67")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j74a3")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yfdyn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j3r1t")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 4.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oi25i"]
+radius = 17.0
+height = 64.0
+
+[node name="Zombie" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ih8b1")
+animation = &"walking"
+autoplay = "idle"
+frame_progress = 0.0126865
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_oi25i")
