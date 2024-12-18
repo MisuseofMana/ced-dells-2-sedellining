@@ -1,5 +1,6 @@
 extends CharacterBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var weapon: WepControl = $Weapon
 
 @export var health = 3 
 const SPEED = 300.0
@@ -22,6 +23,9 @@ func _physics_process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("roll"):
 		roll()
+
+	if Input.is_action_just_pressed("roll"):
+		weapon.ani.play("axe_swing")
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.

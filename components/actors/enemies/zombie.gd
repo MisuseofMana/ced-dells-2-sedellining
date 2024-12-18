@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var player = CharacterBody2D
+@export var stats: EnemyBase = preload("res://components/actors/enemies/enemie_library/zombie.tres")
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
@@ -16,6 +17,9 @@ enum {
 var state = IDLE
 var idle_move_target : Vector2 = Vector2.ZERO
 var incrementer : int = 0
+var just_hit = false 
+
+
 func _physics_process(delta):
 	match state:
 		IDLE:
@@ -26,6 +30,8 @@ func _physics_process(delta):
 		#IN_RANGE:
 		#ATTACK:
 		#HIT:
+
+
 
 func getRandomNumBetween(low, high):
 	return randi_range(low, high)
@@ -54,3 +60,13 @@ func move_towards_player(target, delta):
 	var steering = (desired_velocity - velocity) * delta * 2.5
 	velocity += steering
 	move_and_slide()
+
+
+func _on_hit_box_area_entered(area: Area2D) -> void:
+	if not just_hit:
+		stats.health -= 5 
+		print("im hoit -- ", stats.health)
+		just_hit = true
+		await get_tree().create_timer(1).timeout
+		print("done")
+		just_hit = false

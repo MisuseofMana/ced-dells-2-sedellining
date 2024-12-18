@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b0ra4farco7gn"]
+[gd_scene load_steps=18 format=3 uid="uid://b0ra4farco7gn"]
 
 [ext_resource type="Texture2D" uid="uid://d3wjla5ikis1w" path="res://assets/theCell.png" id="1_wgkl3"]
 [ext_resource type="Script" path="res://components/actors/player/player.gd" id="1_wxlv5"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://bfbi3ocsnrqf8" path="res://assets/theCellroll10.png" id="12_byvp6"]
 [ext_resource type="Texture2D" uid="uid://bxq5ngvbo40mi" path="res://assets/theCellroll11.png" id="13_nfp4y"]
 [ext_resource type="Texture2D" uid="uid://nkce1vfpl3ix" path="res://assets/theCellroll12.png" id="14_56np4"]
+[ext_resource type="PackedScene" uid="uid://0uvbip4y4t63" path="res://components/weapons/weapon_base.tscn" id="15_dxdy5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wquty"]
 animations = [{
@@ -72,6 +73,7 @@ radius = 12.7322
 height = 82.0153
 
 [node name="Player" type="CharacterBody2D"]
+collision_mask = 3
 script = ExtResource("1_wxlv5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -85,3 +87,5 @@ shape = SubResource("CapsuleShape2D_sluol")
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.5, 1.5)
 limit_left = 5
+
+[node name="Weapon" parent="." instance=ExtResource("15_dxdy5")]

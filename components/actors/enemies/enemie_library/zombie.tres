@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EnemyBase" load_steps=2 format=3 uid="uid://bsusbnhb21tn5"]
+
+[ext_resource type="Script" path="res://components/actors/enemies/enemy_base.gd" id="1_i1ahw"]
+
+[resource]
+script = ExtResource("1_i1ahw")
+enemy_name = "Zombie "
+health = 50
+damage = 1
+enemy_color = Color(0.74902, 0, 0, 1)

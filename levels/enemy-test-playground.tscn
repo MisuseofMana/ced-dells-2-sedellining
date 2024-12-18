@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=4 uid="uid://d0w8cdgexeex0"]
 
 [ext_resource type="Texture2D" uid="uid://b7lcochq1gaa3" path="res://assets/tilemaps/spritesheet3.png" id="1_bsb4a"]
-[ext_resource type="PackedScene" path="res://components/actors/player/player.tscn" id="2_ode0w"]
+[ext_resource type="PackedScene" uid="uid://b0ra4farco7gn" path="res://components/actors/player/player.tscn" id="2_ode0w"]
 [ext_resource type="PackedScene" uid="uid://2xms0llemqpc" path="res://components/actors/enemies/zombie.tscn" id="2_r5cu8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vxawq"]
