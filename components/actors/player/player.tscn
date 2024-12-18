@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://b0ra4farco7gn"]
+[gd_scene load_steps=19 format=3 uid="uid://b0ra4farco7gn"]
 
 [ext_resource type="Texture2D" uid="uid://d3wjla5ikis1w" path="res://assets/theCell.png" id="1_wgkl3"]
 [ext_resource type="Script" path="res://components/actors/player/player.gd" id="1_wxlv5"]
+[ext_resource type="Resource" uid="uid://dilxu8gdeo3yb" path="res://components/weapons/weapon_library/axe/best_axe.tres" id="2_4xkv3"]
 [ext_resource type="Texture2D" uid="uid://bctdfsgvelysi" path="res://assets/theCellroll1.png" id="3_1hjbk"]
 [ext_resource type="Texture2D" uid="uid://dqb5fgmtxk3wj" path="res://assets/theCellroll2.png" id="4_hs2ai"]
 [ext_resource type="Texture2D" uid="uid://datim382end5c" path="res://assets/theCellroll3.png" id="5_fjudx"]
@@ -75,6 +76,7 @@ height = 82.0153
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 3
 script = ExtResource("1_wxlv5")
+current_weapon = ExtResource("2_4xkv3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_wquty")

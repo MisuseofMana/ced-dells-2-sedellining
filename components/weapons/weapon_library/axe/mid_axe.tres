@@ -6,8 +6,7 @@
 [resource]
 script = ExtResource("1_uitee")
 weapon_texture = ExtResource("2_roi4i")
-weapon_stats = {
-"damage": 20,
-"type": "melee"
-}
+damage = 10
+melee = true
+ranged = false
 weapon_color = Color(0, 0, 0, 1)

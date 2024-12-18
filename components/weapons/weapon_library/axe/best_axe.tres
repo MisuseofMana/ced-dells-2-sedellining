@@ -6,8 +6,7 @@
 [resource]
 script = ExtResource("1_fgyyg")
 weapon_texture = ExtResource("2_4rijh")
-weapon_stats = {
-"damage": 30,
-"type": "melee"
-}
+damage = 15
+melee = true
+ranged = false
 weapon_color = Color(0, 0, 0, 1)

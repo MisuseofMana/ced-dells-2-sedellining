@@ -1,6 +1,5 @@
-[gd_scene load_steps=7 format=3 uid="uid://0uvbip4y4t63"]
+[gd_scene load_steps=6 format=3 uid="uid://0uvbip4y4t63"]
 
-[ext_resource type="Texture2D" uid="uid://bm7knmrulwiep" path="res://assets/weapons/axe1.png" id="1_0r5i6"]
 [ext_resource type="Script" path="res://components/weapons/weapon_controller.gd" id="2_3kmgn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bf44h"]
@@ -94,7 +93,6 @@ _data = {
 visible = false
 position = Vector2(27, -3)
 rotation = -1.74184
-texture = ExtResource("1_0r5i6")
 offset = Vector2(25, 25)
 flip_v = true
 script = ExtResource("2_3kmgn")

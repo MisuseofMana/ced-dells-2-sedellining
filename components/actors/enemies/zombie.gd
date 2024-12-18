@@ -63,8 +63,10 @@ func move_towards_player(target, delta):
 
 
 func _on_hit_box_area_entered(area: Area2D) -> void:
+	var weapon: WeaponControl = area.get_parent()
+	
 	if not just_hit:
-		stats.health -= 5 
+		stats.health -= weapon.data.damage
 		print("im hoit -- ", stats.health)
 		just_hit = true
 		await get_tree().create_timer(1).timeout
